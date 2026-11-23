@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Login to GitHub Container Registry
+      - name: Login to GHCR
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -31,6 +31,6 @@ jobs:
           context: .
           push: true
           tags: |
-  ghcr.io/aparnaxa/devops-lab-app:v1
-  ghcr.io/aparnaxa/devops-lab-app:v2
-  ghcr.io/aparnaxa/devops-lab-app:latest
+            ghcr.io/aparnaxa/devops-lab-app:v1
+            ghcr.io/aparnaxa/devops-lab-app:v2
+            ghcr.io/aparnaxa/devops-lab-app:latest
